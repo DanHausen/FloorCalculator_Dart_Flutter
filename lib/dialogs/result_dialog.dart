@@ -12,18 +12,21 @@ class ResultDialog extends StatelessWidget {
       title: const Text('Result'),
       content: Wrap(
         children: [
-          ListTile(
-            title: Text('${result.amountPieces} pisos'),
-            subtitle: Text('Quantidade de pisos'),
-          ),
-          ListTile(
-            title: Text('${result.amountFloor} pisos'),
-            subtitle: Text('Quantidade de pisos para o rodapé'),
-          ),
-          ListTile(
-            title: Text('${result.amountPiecesAndFooter} pisos'),
-            subtitle: Text('Quantidade total de pisos'),
-          ),
+          // ListTile(
+          //   title: Text('${result.amountPieces} pisos'),
+          //   subtitle: Text('Quantidade de pisos'),
+          //   dense: true,
+          // ),
+          // ListTile(
+          //   title: Text('${result.amountFloor} pisos'),
+          //   subtitle: Text('Quantidade de pisos para o rodapé'),
+          //   dense: true,
+          // ),
+          // ListTile(
+          //   title: Text('${result.amountPiecesAndFooter} pisos'),
+          //   subtitle: Text('Quantidade total de pisos'),
+          //   dense: true,
+          // ),
           Divider(),
           ListTile(
             title: Text('${result.areaWithoutFooter.toStringAsFixed(2)} m²'),
@@ -33,6 +36,16 @@ class ResultDialog extends StatelessWidget {
             title: Text('${result.areaWithFooter.toStringAsFixed(2)} m²'),
             subtitle: Text('Metragem quadrada com rodapé'),
           ),
+          Divider(),
+          ListTile(
+            title: Text(
+                '${result.priceCalculatorWithoutFooter.toStringAsFixed(2)} Reais'),
+            subtitle: Text('Preço sem rodapé'),
+          ),
+          ListTile(
+              title: Text(
+                  '${result.priceCalculatorWithFooter.toStringAsFixed(2)} Reais'),
+              subtitle: Text('Preço com rodapé')),
         ],
       ),
       actions: [
