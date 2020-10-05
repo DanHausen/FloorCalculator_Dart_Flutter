@@ -87,7 +87,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
   _buildCalculateButton() {
     return RaisedButton(
       child: const Text('CALCULAR'),
-      onPressed: _calcular,
+      onPressed: callBothMethods,
     );
   }
 
@@ -120,5 +120,16 @@ class _CalculatorPageState extends State<CalculatorPage> {
         builder: (context) => ResultDialog(result),
       );
     }
+  }
+
+  void _clear() {
+    if (_formKey.currentState.validate()) {
+      _formKey.currentState.reset();
+    }
+  }
+
+  void callBothMethods() {
+    _calcular();
+    _clear();
   }
 }

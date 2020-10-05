@@ -32,7 +32,7 @@ class CalculatorController {
     result.piecesByWidth = (room.width / floor.width).ceil();
     result.piecesByLength = (room.length / floor.length).ceil();
     result.areaFloor = floor.length * floor.width;
-    result.price = (floor.price);
+    result.price = floor.price;
     return result;
   }
 }
